@@ -13,20 +13,18 @@ We experiment on:
 
 ## Notebooks
 
-- `MNIST Dataset of pix2pix cycleGAN.ipynb`: pix2pix and/or CycleGAN applied to MNIST.
-- `FMNIST Dataset of pix2pix cycleGAN.ipynb`: Image-to-image translation models on FMNIST.
-- `Blur of FMNIST Dataset of pix2pix cycleGAN.ipynb`: Training on blurred-to-clear FMNIST image pairs.
+- `MNIST Dataset of pix2pix cycleGAN.ipynb`: pix2pix and CycleGAN applied to MNIST.
+- `FMNIST Dataset of pix2pix cycleGAN.ipynb`: pix2pix and CycleGAN applied to FMNIST.
+- `Blur of FMNIST Dataset of pix2pix cycleGAN.ipynb`: Evaluated robustness on Gaussian blurred FMNIST.
 
 ## Goals
 
-- Learn mappings from **blurred** to **clear** images using paired data (pix2pix).
-- Investigate whether CycleGAN can perform deblurring in **unpaired** settings.
-- Compare performance of both models across datasets.
+- Learn mappings from **blurred** to **clear** images.
+- Compare performance models across datasets.
 
 ## Results
 
-- Pix2pix successfully reconstructs clean images from blurred FMNIST inputs in a supervised setting.
-- CycleGAN can learn meaningful transformations with unpaired training data, though with lower fidelity.
+- Pix2pix-CycleGAN successfully reconstructs clean images from blur photo inputs to their original images for MNIST, FMNIST, blurred FMNIST in a supervised setting.
 
 ## Requirements
 
@@ -35,12 +33,7 @@ We experiment on:
 - Matplotlib, NumPy
 - (Optional) GPU for faster training
 
-Install dependencies:
-```bash
-pip install tensorflow matplotlib numpy
-```
-
 ## Acknowledgments
 
 - Based on [TensorFlow's CycleGAN tutorial](https://www.tensorflow.org/tutorials/generative/cyclegan).
-- Datasets from [TensorFlow Datasets](https://www.tensorflow.org/datasets).
+- Datasets from [TensorFlow Datasets](https://www.tensorflow.org/datasets) and photos we take.
